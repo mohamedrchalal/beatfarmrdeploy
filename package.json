@@ -1,0 +1,23 @@
+{
+  "name": "beatfarmer",
+  "version": "1.0.0",
+  "description": "make beats online with your friends!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedrchalal/BeatFarmer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedrchalal/BeatFarmer/issues"
+  },
+  "homepage": "https://github.com/mohamedrchalal/BeatFarmer#readme",
+  "dependencies": {
+    "angularfire": "^1.2.0",
+    "socket.io": "^1.4.5"
+  }
+}
