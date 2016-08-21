@@ -200,43 +200,43 @@
 
     function onUpdateKick(data){
       vm.activeKick = data.kickArray;
-      console.log(data);
-      console.log(vm.activeKick);
+      //console.log(data);
+      //console.log(vm.activeKick);
     }
     function onUpdateSnare(data){
       vm.activeSnare = data.snareArray;
-      console.log(data);
-      console.log(vm.activeSnare);
+      //console.log(data);
+      //console.log(vm.activeSnare);
     }
     function onUpdateHat(data){
       vm.activeHat = data.hatArray;
-      console.log(data);
-      console.log(vm.activeHat);
+      //console.log(data);
+      //console.log(vm.activeHat);
     }
     function onUpdateCrash(data){
       vm.activeCrash = data.crashArray;
-      console.log(data);
-      console.log(vm.activeCrash);
+      //console.log(data);
+      //console.log(vm.activeCrash);
     }
     function onUpdateOscVol(data){
       vm.currentVolume = data.oscVol;
-      console.log(data);
-      console.log(vm.currentVolume);
+      //console.log(data);
+      //console.log(vm.currentVolume);
     }
     function onUpdateFilterFreq(data){
       vm.currentFilt = data.filterFreq;
-      console.log(data);
-      console.log(vm.currentFilt);
+      //console.log(data);
+      //console.log(vm.currentFilt);
     }
     function onUpdatePitch(data){
       vm.currentFreq = data.pitch;
-      console.log(data);
-      console.log(vm.currentFreq);
+      //console.log(data);
+      //console.log(vm.currentFreq);
     }
     function onUpdateOscType(data){
     oscillator.type = data.oscType;
-      console.log(data);
-      console.log(oscillator.type);
+      //console.log(data);
+      //console.log(oscillator.type);
     }
 
     vm.setEventHandlers();
@@ -248,8 +248,8 @@
 
 
       function init(){
-        console.log(vm.activeKick);
-        console.log('fudge');
+        //console.log(vm.activeKick);
+        //console.log('fudge');
         var delay1 = null;
         var delay2 = null;
         var delay3 = null;
@@ -299,14 +299,14 @@
 
         if($.inArray(1, vm.activeKick) !== -1){
           $interval(vm.playKick(), 2000);
-          console.log("1");
+          //console.log("1");
         }else{
 
         };
         if($.inArray(2, vm.activeKick) !== -1){
 
           var interval = $interval(delay250, 2000, 1);
-          console.log('ey',delay1);
+          //console.log('ey',delay1);
           $timeout.cancel(delay1);
 
         }else{
@@ -358,7 +358,7 @@
       $interval(init, 2000);
 
       function init(){
-        console.log('fudge1');
+        //console.log('fudge1');
         var delay1 = null;
         var delay1 = null;
         var delay2 = null;
@@ -467,7 +467,7 @@
       $interval(init, 2000);
 
       function init(){
-        console.log('fudge1');
+        //console.log('fudge1');
         var delay1 = null;
         var delay1 = null;
         var delay2 = null;
@@ -578,7 +578,7 @@
       $interval(init, 2000);
 
       function init(){
-        console.log('fudge1');
+        //console.log('fudge1');
         var delay1 = null;
         var delay1 = null;
         var delay2 = null;
@@ -684,7 +684,7 @@
     vm.setCrashInt();
 
     vm.switchOsc = function(selection){
-      console.log(selection);
+      //console.log(selection);
       oscillator.type = selection;
       socket.emit("updateOscType",{oscType: selection});
     };
@@ -704,7 +704,7 @@
     };
     vm.volChange = function() {
       gainNode.gain.value = vm.currentVolume;
-      console.log(vm.currentVolume);
+      //console.log(vm.currentVolume);
       socket.emit("updateOscVol",{oscVol: vm.currentVolume});
     };
 
@@ -737,10 +737,10 @@
     vm.activateKick = function(val){
       if($.inArray(val, vm.activeKick) == -1){
         vm.activeKick.push(val);
-        console.log(vm.activeKick);
+        //console.log(vm.activeKick);
       }else{
         vm.activeKick.splice($.inArray(val, vm.activeKick), 1);
-        console.log(vm.activeKick);
+        //console.log(vm.activeKick);
       }
       socket.emit("updatekick",{kickArray: vm.activeKick})
     };
@@ -748,10 +748,10 @@
     vm.activateSnare = function(val){
       if($.inArray(val, vm.activeSnare) == -1){
       vm.activeSnare.push(val);
-      console.log(vm.activeSnare);
+      //console.log(vm.activeSnare);
       }else{
         vm.activeSnare.splice($.inArray(val, vm.activeSnare), 1);
-        console.log(vm.activeSnare)
+        //console.log(vm.activeSnare)
       }
       socket.emit("updatesnare",{snareArray: vm.activeSnare})
     };
@@ -759,10 +759,10 @@
     vm.activateHat = function(val){
       if($.inArray(val, vm.activeHat) == -1){
       vm.activeHat.push(val);
-      console.log(vm.activeHat);
+      //console.log(vm.activeHat);
       }else{
         vm.activeHat.splice($.inArray(val, vm.activeHat));
-        console.log(vm.activeHat)
+        //console.log(vm.activeHat)
       }
       socket.emit("updatehat",{hatArray: vm.activeHat})
     };
@@ -770,10 +770,10 @@
     vm.activateCrash = function(val){
       if($.inArray(val, vm.activeCrash) == -1){
       vm.activeCrash.push(val);
-      console.log(vm.activeCrash);
+      //console.log(vm.activeCrash);
       }else{
         vm.activeCrash.splice($.inArray(val, vm.activeCrash));
-        console.log(vm.activeCrash)
+        //console.log(vm.activeCrash)
       }
       socket.emit("updatecrash",{crashArray: vm.activeCrash})
     };
