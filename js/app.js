@@ -71,7 +71,7 @@
 
     function loadKick(x){
       var request = new XMLHttpRequest();
-      request.open('GET', '../sounds/Digitalo_Kick20.wav', true);
+      request.open('GET', '../beatfarmr/sounds/Digitalo_Kick20.wav', true);
       request.responseType = 'arraybuffer';
       //load audio into buffer
 
@@ -87,7 +87,7 @@
     };
     function loadSnare(x){
       var request = new XMLHttpRequest();
-      request.open('GET', '../sounds/HandClap.wav', true);
+      request.open('GET', '../beatfarmr/sounds/HandClap.wav', true);
       request.responseType = 'arraybuffer';
 
       // Decode asynchronously
@@ -102,7 +102,7 @@
     };
     function loadCrash(x){
       var request = new XMLHttpRequest();
-      request.open('GET', '../sounds/VEC1_Cymbals_OH_035.wav', true);
+      request.open('GET', '../beatfarmr/sounds/VEC1_Cymbals_OH_035.wav', true);
       request.responseType = 'arraybuffer';
 
       // Decode asynchronously
@@ -117,7 +117,7 @@
     };
     function loadHat(x){
       var request = new XMLHttpRequest();
-      request.open('GET', '../sounds/Dance_Hat01.wav', true);
+      request.open('GET', '../beatfarmr/sounds/Dance_Hat01.wav', true);
       request.responseType = 'arraybuffer';
 
       // Decode asynchronously
