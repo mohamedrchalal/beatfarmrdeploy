@@ -9,7 +9,7 @@
   .controller('synth', ['$interval', '$timeout', synthCtrlFunc]);
   //include $interval and $timeout dependencies (**angular's setInterval and setTimeout**)
 
-    var socket = io.connect('http://107.170.60.40:3000')
+    var socket = io.connect('http://45.55.238.13:3000')
   //set variable as socket connection to the web socket server (socket.io)
 
     var iterationArray = [1,2,3,4,5,6,7,8];
